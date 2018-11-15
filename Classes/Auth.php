@@ -12,7 +12,7 @@ class Auth {
         $fileContent = self::get_all_users();
         // Lägg till user på sista plats i array
         $fileContent[] = $user;  
-        file_put_contents("users.json",json_encode($fileContent));
+        file_put_contents("users.json",json_encode($fileContent, JSON_PRETTY_PRINT));
     }
 
     public static function sign_up($user)
